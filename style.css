@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #111;
+}
+
+header {
+    background-color: #FFD700;
+    padding: 20px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.sobre, .pitch {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.sobre .texto {
+    max-width: 500px;
+}
+
+.sobre .logo-bloco img {
+    max-width: 300px;
+}
+
+.pitch .video-miniatura img {
+    width: 400px;
+    border-radius: 16px;
+}
+
+.pitch .descricao {
+    max-width: 500px;
+    margin-left: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 60px 40px;
+}
+
+.card {
+    background-color: #fff3e0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    padding: 20px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    color: #fff;
+}
+
+@media(max-width:768px){
+    .sobre, .pitch {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .pitch .descricao {
+        margin-left: 0;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background-color: #FFD700;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: #fff;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
