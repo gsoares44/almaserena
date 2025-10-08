@@ -134,23 +134,4 @@ footer {
     nav.active ul {
         display: flex;
     }
-    /* --- CÓDIGO DE CORREÇÃO PARA O MENU MOBILE --- */
-
-/* 1. Torna o cabeçalho a referência de posicionamento */
-.cabecalho {
-  position: relative;
-}
-
-/* 2. Posiciona o menu em relação ao cabeçalho */
-.cabecalho__menu {
-  position: absolute;
-  top: 100%; /* << O ponto mais importante: posiciona abaixo do cabeçalho */
-  left: 0;
-  width: 100%;
-  background-color: #FFD700; /* Cor de fundo para o menu aberto */
-
-  /* Centraliza os links quando o menu estiver aberto */
-  display: flex;
-  justify-content: center;
-}
 }
